@@ -12,6 +12,9 @@ export default function Home() {
 
             <DishCarousel title="Recently Cooked" />
             <DishCarousel title="Currently Trending" />
+            <DishCarousel title="Currently Trending" />
+            <DishCarousel title="Currently Trending" />
+            <DishCarousel title="Currently Trending" />
         </main>
     );
 }
