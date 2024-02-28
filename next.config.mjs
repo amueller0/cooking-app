@@ -1,7 +1,11 @@
 import nextPWA from "next-pwa";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    compiler: {
+        removeConsole: process.env.NODE_ENV !== "development"
+    }
+};
 
 const withPWA = nextPWA({
     dest: "public",
