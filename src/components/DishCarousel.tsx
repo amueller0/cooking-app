@@ -11,7 +11,7 @@ function DishCarousel({ title }: DishCarouselProps) {
 
             <div className="flex flex-row gap-4 overflow-auto">
                 {[...Array(3)].map((_, index) => (
-                    <DishCarouselItem key={index} />
+                    <DishCarouselItem title="Spaghetti Bolognese" key={index} />
                 ))}
             </div>
         </div>
