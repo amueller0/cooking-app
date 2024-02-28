@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import DesktopNotSupported from "@/components/DesktopNotSupported";
+import cn from "@/utils/cn";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={cn(inter.className, "relative w-screen h-screen")}>
+                <div className="hidden lg:block h-full">
+                    <DesktopNotSupported />
+                </div>
+                <div className="block lg:hidden h-full">{children}</div>
+            </body>
         </html>
     );
 }
