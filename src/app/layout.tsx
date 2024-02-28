@@ -4,6 +4,7 @@ import "./globals.css";
 import DesktopNotSupported from "@/components/DesktopNotSupported";
 import cn from "@/utils/cn";
 import NavBar from "@/components/NavBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,8 @@ export default function RootLayout({
                         <NavBar />
                     </div>
                 </div>
+
+                <Analytics />
             </body>
         </html>
     );
