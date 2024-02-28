@@ -21,15 +21,13 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={cn(inter.className, "relative w-screen h-screen")}>
-                <div>
-                    <div className="hidden lg:block h-full">
-                        <DesktopNotSupported />
-                    </div>
-                    <div className="block lg:hidden h-full">
-                        {children}
+                <div className="hidden lg:block h-full">
+                    <DesktopNotSupported />
+                </div>
+                <div className="block lg:hidden h-full">
+                    {children}
 
-                        <NavBar />
-                    </div>
+                    <NavBar />
                 </div>
 
                 <Analytics />
