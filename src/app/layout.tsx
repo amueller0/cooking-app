@@ -29,11 +29,11 @@ export default function RootLayout({
                 <div className="hidden lg:block h-full">
                     <DesktopNotSupported />
                 </div>
-                <main className="block lg:hidden h-full p-4">
-                    {children}
+                <div className="block lg:hidden h-full">
+                    <main className="p-4">{children}</main>
 
                     <NavBar />
-                </main>
+                </div>
 
                 <Analytics />
             </body>
