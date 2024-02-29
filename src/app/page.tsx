@@ -6,7 +6,7 @@ export default async function Home() {
     const recipes = await prisma.recipe.findMany();
 
     return (
-        <main className="p-4">
+        <>
             <h1 className="text-xl text-white/75">Cooking App</h1>
             <div className="flex flex-row items-center gap-2 mt-2 mb-16 text-3xl">
                 <MdAccountCircle />
@@ -15,6 +15,6 @@ export default async function Home() {
 
             <DishCarousel title="Recently Cooked" content={recipes} />
             <DishCarousel title="Currently Trending" content={recipes} />
-        </main>
+        </>
     );
 }

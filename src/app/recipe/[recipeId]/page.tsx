@@ -18,7 +18,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
     }
 
     return (
-        <div className="p-4">
+        <>
             <h1 className="text-3xl font-bold">{recipe.title}</h1>
             <div className="text-sm font-thin">
                 Created on {recipe.createdAt.toDateString()}
@@ -32,6 +32,6 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 <h2 className="text-xl font-semibold">Instructions</h2>
                 <div className="mt-2">{recipe.instructions}</div>
             </div>
-        </div>
+        </>
     );
 }
