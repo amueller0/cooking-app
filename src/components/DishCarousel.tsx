@@ -1,17 +1,21 @@
+import type { Recipe } from "@prisma/client";
 import DishCarouselItem from "./DishCarouselItem";
 
 export type DishCarouselProps = {
     title: string;
+    content: Recipe[];
 };
 
-function DishCarousel({ title }: DishCarouselProps) {
+function DishCarousel({ title, content }: DishCarouselProps) {
     return (
         <div className="mt-8">
             <h2 className="text-xl text-white/75 font-medium mb-2">{title}</h2>
 
             <div className="flex flex-row gap-4 overflow-auto">
-                {[...Array(3)].map((_, index) => (
-                    <DishCarouselItem title="Spaghetti Bolognese" key={index} />
+                {content.map((recipe, index) => (
+                    <a href={`/recipe/${recipe.id}`}>
+                        <DishCarouselItem title={recipe.title} key={index} />
+                    </a>
                 ))}
             </div>
         </div>
