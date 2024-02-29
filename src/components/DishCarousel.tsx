@@ -13,8 +13,8 @@ function DishCarousel({ title, content }: DishCarouselProps) {
 
             <div className="flex flex-row gap-4 overflow-auto">
                 {content.map((recipe, index) => (
-                    <a href={`/recipe/${recipe.id}`}>
-                        <DishCarouselItem title={recipe.title} key={index} />
+                    <a href={`/recipe/${recipe.id}`} key={index}>
+                        <DishCarouselItem title={recipe.title} />
                     </a>
                 ))}
             </div>
