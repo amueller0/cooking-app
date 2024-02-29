@@ -1,5 +1,6 @@
 import type { Recipe } from "@prisma/client";
 import DishCarouselItem from "./DishCarouselItem";
+import Link from "next/link";
 
 export type DishCarouselProps = {
     title: string;
@@ -13,9 +14,9 @@ function DishCarousel({ title, content }: DishCarouselProps) {
 
             <div className="flex flex-row gap-4 overflow-auto">
                 {content.map((recipe, index) => (
-                    <a href={`/recipe/${recipe.id}`} key={index}>
+                    <Link href={`/recipe/${recipe.id}`} key={index}>
                         <DishCarouselItem title={recipe.title} />
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>

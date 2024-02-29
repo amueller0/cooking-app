@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { IconType } from "react-icons";
 
@@ -13,9 +14,9 @@ function NavBarItem({ path, icon }: NavBarItemProps) {
     const isHighlighted = currentPath === path;
 
     return (
-        <a href={path} className="flex justify-center items-center p-3 text-4xl">
+        <Link href={path} className="flex justify-center items-center p-3 text-4xl">
             {icon({ fill: isHighlighted ? "#cc0000" : "#ffffff" })}
-        </a>
+        </Link>
     );
 }
 
