@@ -5,6 +5,7 @@ import DesktopNotSupported from "@/components/DesktopNotSupported";
 import cn from "@/utils/cn";
 import NavBar from "@/components/NavBar";
 import { Analytics } from "@vercel/analytics/next";
+import Header from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,8 @@ export default function RootLayout({
                     <DesktopNotSupported />
                 </div>
                 <div className="block lg:hidden h-full">
+                    <Header />
+
                     <main className="p-4">{children}</main>
 
                     <NavBar />
