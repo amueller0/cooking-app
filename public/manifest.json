@@ -1,7 +1,7 @@
 {
     "theme_color": "#cc0000",
     "background_color": "#000000",
-    "display": "fullscreen",
+    "display": "standalone",
     "scope": "/",
     "start_url": "/",
     "name": "Cooking App",
