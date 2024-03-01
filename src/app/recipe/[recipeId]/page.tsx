@@ -21,6 +21,11 @@ export default async function RecipePage({ params }: RecipePageProps) {
 
     return (
         <>
+            <div className="relative">
+                <img className="mb-4 rounded-md" src={recipe.imageUrl} />
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/0 to-black/75 z-10" />
+            </div>
+
             <h1 className="text-3xl font-bold">{recipe.title}</h1>
             <div className="text-sm font-thin">
                 Created on {recipe.createdAt.toDateString()}

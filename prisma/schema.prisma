@@ -13,6 +13,7 @@ model Recipe {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
+    imageUrl     String
     title        String
     ingredients  String
     instructions String
