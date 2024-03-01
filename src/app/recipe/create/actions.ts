@@ -2,6 +2,7 @@
 
 import prisma from "@/lib/db";
 import { CreateRecipeSchema } from "./schema";
+import { revalidatePath } from "next/cache";
 
 export async function createRecipe(previousState: unknown, formData: FormData) {
     const result = CreateRecipeSchema.safeParse(Object.fromEntries(formData));
@@ -17,6 +18,9 @@ export async function createRecipe(previousState: unknown, formData: FormData) {
             instructions: result.data.instructions
         }
     });
+
+    revalidatePath("/");
+    revalidatePath("/explore");
 
     if (result.success) {
         return { data: recipe };
