@@ -7,7 +7,7 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 
 function NavBar() {
     return (
-        <div className="fixed bottom-0 left-0 w-full grid grid-flow-col bg-black drop-shadow-lg">
+        <div className="sticky bottom-0 left-0 w-full grid grid-flow-col bg-black drop-shadow-lg z-50">
             <NavBarItem path="/" icon={IoMdHome} />
             <NavBarItem path="/explore" icon={MdExplore} />
             <NavBarItem path="/recipe/create" icon={AiOutlinePlusCircle} />
