@@ -12,7 +12,7 @@ function DishCarouselItem({ title }: DishCarouselItemProps) {
             />
 
             {/* Gradient */}
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-black/50 to-black/80" />
+            <div className="absolute top-0 left-0 w-full h-full rounded-3xl bg-gradient-to-b from-transparent via-black/50 to-black/80" />
 
             <div className="absolute bottom-0 m-2">
                 <p className="font-light text-xl">{title}</p>
