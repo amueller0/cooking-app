@@ -1,21 +1,22 @@
 export type DishCarouselItemProps = {
     title: string;
+    imageUrl: string;
 };
 
-function DishCarouselItem({ title }: DishCarouselItemProps) {
+function DishCarouselItem({ title, imageUrl }: DishCarouselItemProps) {
     return (
         <div className="relative min-w-[200px]">
             <img
-                src={`https://picsum.photos/200?random=${Math.random()}`}
+                src={imageUrl}
                 alt={title}
-                className="rounded-3xl -z-10"
+                className="w-[200px] h-[200px] object-cover rounded-3xl -z-10"
             />
 
             {/* Gradient */}
             <div className="absolute top-0 left-0 w-full h-full rounded-3xl bg-gradient-to-b from-transparent via-black/50 to-black/80" />
 
             <div className="absolute bottom-0 m-2">
-                <p className="font-light text-xl">{title}</p>
+                <p className="font-normal text-xl">{title}</p>
             </div>
         </div>
     );
