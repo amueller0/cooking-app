@@ -30,10 +30,10 @@ export default function RootLayout({
                 <div className="hidden lg:block h-full">
                     <DesktopNotSupported />
                 </div>
-                <div className="block lg:hidden h-full">
+                <div className="grid grid-rows-[min-content_1fr_min-content] lg:hidden h-full">
                     <Header />
 
-                    <main className="p-4">{children}</main>
+                    <main className="min-w-full p-4">{children}</main>
 
                     <NavBar />
                 </div>
