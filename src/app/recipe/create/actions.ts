@@ -2,7 +2,6 @@
 
 import prisma from "@/lib/db";
 import { CreateRecipeSchema } from "./schema";
-import { revalidatePath } from "next/cache";
 import { put } from "@vercel/blob";
 import { customAlphabet } from "nanoid";
 
@@ -30,9 +29,6 @@ export async function createRecipe(previousState: unknown, formData: FormData) {
             instructions: result.data.instructions
         }
     });
-
-    revalidatePath("/");
-    revalidatePath("/explore");
 
     if (result.success) {
         return { data: recipe };

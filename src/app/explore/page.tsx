@@ -2,6 +2,8 @@ import DishCarousel from "@/components/DishCarousel";
 import prisma from "@/lib/db";
 import CreateButton from "./CreateButton";
 
+export const dynamic = "force-dynamic";
+
 export default async function ExplorePage() {
     const recipes = await prisma.recipe.findMany();
 

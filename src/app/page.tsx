@@ -2,6 +2,8 @@ import DishCarousel from "@/components/DishCarousel";
 import { MdAccountCircle } from "react-icons/md";
 import prisma from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
     const recipes = await prisma.recipe.findMany();
 
